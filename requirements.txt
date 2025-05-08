@@ -8,3 +8,5 @@ docx2txt==0.8
 pypdf==5.0.1
 numpy==1.26.4
 python-dotenv==1.0.1
+requests==2.32.3 
+beautifulsoup4==4.12.3
