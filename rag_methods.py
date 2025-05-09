@@ -96,8 +96,11 @@ def load_predefined_docs_and_urls(openai_api_key):
     
     # Predefined file paths (replace with your actual file paths)
     file_paths = [
-        "./docs/insurance_policy.docx",
-        "./docs/investment_guide.pdf"
+        "./docs/America's_Choice_2500_Gold_SOB (1) (1).pdf",
+        "./docs/America's_Choice_5000_Bronze_SOB (2).pdf",
+        "./docs/America's_Choice_5000_HSA_SOB (2).pdf",
+        "./docs/America's_Choice_7350_Copper_SOB (1) (1).pdf",
+        "./docs/America's_Choice_Medical_Questions_-_Modified_(3) (1).docx"
     ]
     
     # Predefined URLs
