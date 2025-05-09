@@ -30,14 +30,13 @@ openai_api_key = st.text_input(
     "OpenAI API Key (required)",
     type="password",
     placeholder="Enter your key starting with 'sk-'",
-    help="Get your API key from https://platform.openai.com/api-keys"
 )
 
 # Validate API Key
 missing_openai = openai_api_key == "" or openai_api_key is None or not openai_api_key.startswith("sk-")
 
 if missing_openai:
-    st.warning("Please enter a valid OpenAI API key to use the chatbot.")
+    st.warning("Please enter a valid OpenAI API key")
 else:
     # Setup
     if "session_id" not in st.session_state:
@@ -46,7 +45,7 @@ else:
     if "messages" not in st.session_state:
         st.session_state.messages = [
             {"role": "user", "content": "hello"},
-            {"role": "assistant", "content": "Hello! I'm a chatbot for insurance and investment queries. Ask me a question based on the provided documents and URLs, and I'll answer if the information is available."}
+            {"role": "assistant", "content": "Hello! I'm a chatbot for insurance and investment queries."}
         ]
 
     # Load predefined files and URLs with API key
@@ -61,7 +60,7 @@ else:
             models.append(model)
 
         st.selectbox(
-            "🤖 Select a Model",
+            "Select a Model",
             options=models,
             key="model",
         )

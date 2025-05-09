@@ -131,7 +131,7 @@ def get_conversational_rag_chain(llm):
     retriever_chain = _get_context_retriever_chain(st.session_state.vector_db, llm)
     prompt = ChatPromptTemplate.from_messages([
         ("system",
-        """You are a helpful assistant, you will have to answer the 
+        """ you will have to answer the 
         user's questions strictly based on the context provided. If the 
         answer to the question is not in the context, say you dont know.
         {context} """),
